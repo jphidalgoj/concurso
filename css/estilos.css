@@ -1,0 +1,31 @@
+:root{
+    --griss_suave:#E0E0E0;/*se utilizara para el fondo principal*/
+    --verde_agua:#E0E0E0;/*se utilizara para acentos y botones*/
+    --azul_suave:#B3E5FC;/*se utilizara para acentos y botones*/
+    --lavanda:#E1BEE7; /*para destacar informacion importante o para ciertos elementos*/
+    --blanco:#FFFFFF;
+
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 16px;
+
+}
+.titulo{
+    text-align: center;
+    font-size: 3.8rem;
+}
+.contenedor{
+    width: 120rem;
+    margin: 0 auto;
+}
+.nav-bgr{
+    background-color: var(--azul_suave);
+}
+.nav-principal{
+    
+}
+
