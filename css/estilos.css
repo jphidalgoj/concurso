@@ -11,6 +11,13 @@
 html{
     font-size: 62.5%;
     box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+.servicios, 
+.nav-principal, 
+.formulario{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 *,*:before, *:after{
     box-sizing: inherit;
@@ -57,11 +64,32 @@ h1,h2,h3{
     border-radius: .5rem;
     width: 90%;
     text-align: center;
+    border: none;
+}
+.boton:hover{
+    cursor: pointer;
 }
 @media (min-width: 768px){
     .boton{
         width: auto;
     }
+}
+/*utilidades */
+.w-sm-100{
+    width: 100%;
+    background: var(--azul_suave);
+}
+@media (min-width: 768px){
+    .w-sm-100{
+        width: auto;
+        background: var(--azul_suave);
+    }
+}
+.flex{
+    display: flex;
+}
+.alinear-derecha{
+    justify-content: flex-end;
 }
 .nav-bgr{
     background-color: var(--azul_suave);
@@ -115,6 +143,7 @@ h1,h2,h3{
 
 }
 /*servicios*/
+
 @media (min-width:768px ){
     .servicios{
         display: grid;
@@ -153,4 +182,63 @@ h1,h2,h3{
     width: 18rem;
     height: 18rem;
     border-radius: 2rem;
+}
+/*formulario*/
+
+.formulario{
+    background-color: var(--griss_suave);
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+
+}
+
+.formulario fieldset{
+    border: none;
+   
+}
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--negro);
+
+}
+
+@media (min-width: 768px){
+    .contenedor-campos{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem;
+    }
+    .campo:nth-child(3){
+        grid-column: 1 / 4;
+    }
+}
+.campo{
+    margin-bottom: 1rem;
+}
+.campo label{
+    color: var(--negro);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+.enviar .boton{
+    width: 100%;
+    background: var(--blanco);
+}
+
+.footer{
+    text-align: center;
 }
